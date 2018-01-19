@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import HttpResponseRedirect, Http404
+<<<<<<< HEAD
 from eventauth.models import EventUsers, EventUsersForm
 
 def index(request):
@@ -22,3 +23,9 @@ def users(request):
 	data['list_item'] = list_item
 	data['form'] = form
 	return render(request, 'users.html')
+=======
+
+
+def index(request):
+	return render(request,'home.html')
+>>>>>>> a413f29ca018116edf7a3ed06a0b9b0ac17492fc
