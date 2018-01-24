@@ -16,5 +16,17 @@ class EventUsersForm(forms.ModelForm):
 	email = forms.CharField(label= 'Email', max_length=100, strip=True)
 	class Meta:
 		model = EventUsers
-		fields = '__all__'
+		fields = ['username', 'password', 'email']
+
+class EventGroups(models.Model):
+	id = models.AutoField(primary_key=True)
+	name = models.CharField(max_length=256, default='')
+	class Meta:
+		db_table = "eventgroups"
+		ordering = ['-id']
+class EventGroupsForm(forms.ModelForm):
+	name = forms.CharField(label= 'Name', max_length=100, strip=True)
+	class Meta:
+		model = EventGroups
+		fields = ['name']
 	

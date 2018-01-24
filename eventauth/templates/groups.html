@@ -1,7 +1,7 @@
-<h1>User</h1>
+<h1>Group</h1>
 <!-- Form Nhap lieu-->
 {% if id == None %}
-   <form action="{% url 'home:users' %}" method="post">
+   <form action="{% url 'home:groups' %}" method="post">
 {% else %}
   <p>testing</p>
 {% endif %}
@@ -14,9 +14,7 @@
 <table border=1 style="width: 100%; border-collapse: collapse">
    {% for item in list_item %}
    <tr>
-       <td>{{ item.username }}</td>
-	   <td>{{ item.password }}</td>
-	   <td>{{ item.email }}</td>
+       <td>{{ item.name }}</td>
    </tr>
    {% endfor %}
 </table>
