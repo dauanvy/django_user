@@ -9,6 +9,8 @@ def index(request):
 	return render(request,'home.html')
 def success(request):
 	return render(request,'success.html')
+def base_admin(request):
+	return render(request,'admin/base_admin.html')
 #User
 def users(request):
 	data = {}
